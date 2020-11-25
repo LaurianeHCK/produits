@@ -1,9 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProduitController!{% endblock %}
+{% block title %}Page Produit{% endblock %}
 
 {% block body %}
-<div>
-    <p>mes produits</p>
+{% for produit in produits %}
+<div class="produit" >
+<h1>le nom du produit : {{produit.nom}}</h1>
+<p>{{produit.createdAt|date("m/d/Y")}}</p>
+<img src="{{produit.image}}" alt="">
+<p>Description: {{produit.description}}</p>
+<p>le prix est {{produit.prix}}</p>
+ <a href="{{path('affiche_produit',{'id': produit.id})}}"><button class="btn btn-warning">Lire plus sur le produit</button></a>   
 </div>
+{% endfor %}
 {% endblock %}
+
+
+

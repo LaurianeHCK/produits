@@ -1,1 +1,12 @@
  {% extends "base.html.twig" %}
+
+ {% block body %}
+ <h1>mon prenom est {{prenom}} et mon age est {{monage}}</h1>
+ {% if monage >= 18 %}
+ <p>Vous etes majeur</p>
+ {% else %}
+  <p>Vous etes mineur</p>
+  {% endif %}
+
+
+  {% endblock body %}

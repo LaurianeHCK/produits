@@ -1,0 +1,14 @@
+ {% extends "base.html.twig" %}
+
+ {% block body %}
+
+<div class="produit" >
+<h1>le nom du produit : {{produit.nom}}</h1>
+<p>{{produit.createdAt|date("m/d/Y")}}</p>
+<img src="{{produit.image}}" alt="">
+<p>Description: {{produit.description}}</p>
+<p>le prix est {{produit.prix}}</p>
+ <a href=""><button class="btn btn-warning">Lire plus sur le produit</button></a>   
+</div>
+
+  {% endblock body %}
